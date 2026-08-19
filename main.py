@@ -11,6 +11,7 @@ from analysis.analyze import main as analyze_main
 from analysis.visualize import plot_all
 from analysis.analyze import price_band_distribution
 from analysis.report import build_report
+from analysis.export_excel import main as export_excel
 
 
 def main():
@@ -36,11 +37,12 @@ def main():
     plot_all(df, price_band_distribution(df))
 
     print("\n" + "=" * 50)
-    print("STEP 5/5 生成报告")
+    print("STEP 5/5 生成报告 + 成果 Excel")
     print("=" * 50)
     build_report(result)
+    export_excel(result)
 
-    print("\n全部完成。报告: output/report.md")
+    print("\n全部完成。报告: output/report.md　成果: output/项目成果分析.xlsx")
 
 
 if __name__ == "__main__":

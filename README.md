@@ -11,7 +11,9 @@
 | 牛仔裤 | -0.782 | 40–59 元（占 43.8% 销量） | 58 元 | 79 元 | 112 元 |
 
 > 两个品类的价格-销量均呈显著负相关：价格越低、销量越高。
-> 完整报告见 [`output/report.md`](output/report.md)。
+> 完整报告见 [`output/report.md`](output/report.md)，
+> 成果汇总表见 [`output/项目成果分析.xlsx`](output/项目成果分析.xlsx)
+> （含品类平台统计 / 价格带分布 / 相关性 / 核心价格带 / 定价建议 / 明细 7 个 Sheet）。
 
 ## 目录结构
 
@@ -30,13 +32,15 @@ ecommerce-price-analysis/
 │   ├── clean.py                  # 清洗入库（CSV + SQLite）
 │   ├── analyze.py                # 价格带/相关性/定价建议
 │   ├── visualize.py              # matplotlib 图表
-│   └── report.py                 # Markdown 报告生成
+│   ├── report.py                 # Markdown 报告生成
+│   └── export_excel.py           # 成果汇总 Excel 导出
 ├── data/
 │   ├── raw/                      # 抓取结果 + 备用数据
 │   └── processed/                # 清洗后 CSV + SQLite
 └── output/
     ├── figures/                  # 4 张图表 PNG
-    └── report.md                 # 定价分析报告
+    ├── report.md                 # 定价分析报告
+    └── 项目成果分析.xlsx          # 成果汇总（7 个 Sheet）
 ```
 
 ## 环境与运行
