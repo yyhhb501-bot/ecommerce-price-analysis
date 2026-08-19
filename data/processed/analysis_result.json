@@ -1,0 +1,306 @@
+{
+  "summary": [
+    {
+      "category": "polo衫",
+      "platform": "抖音",
+      "sku_count": 15,
+      "min_price": 39,
+      "median_price": 68.0,
+      "max_price": 109,
+      "mean_sales": 1669.8,
+      "total_sales": 25047
+    },
+    {
+      "category": "polo衫",
+      "platform": "拼多多",
+      "sku_count": 14,
+      "min_price": 26,
+      "median_price": 34.5,
+      "max_price": 52,
+      "mean_sales": 5480.6,
+      "total_sales": 76729
+    },
+    {
+      "category": "polo衫",
+      "platform": "淘宝",
+      "sku_count": 15,
+      "min_price": 39,
+      "median_price": 75.0,
+      "max_price": 129,
+      "mean_sales": 513.5,
+      "total_sales": 7702
+    },
+    {
+      "category": "牛仔裤",
+      "platform": "抖音",
+      "sku_count": 15,
+      "min_price": 57,
+      "median_price": 101.0,
+      "max_price": 120,
+      "mean_sales": 1935.4,
+      "total_sales": 29031
+    },
+    {
+      "category": "牛仔裤",
+      "platform": "拼多多",
+      "sku_count": 15,
+      "min_price": 36,
+      "median_price": 50.0,
+      "max_price": 72,
+      "mean_sales": 5997.8,
+      "total_sales": 89967
+    },
+    {
+      "category": "牛仔裤",
+      "platform": "淘宝",
+      "sku_count": 14,
+      "min_price": 59,
+      "median_price": 118.0,
+      "max_price": 166,
+      "mean_sales": 438.6,
+      "total_sales": 6141
+    }
+  ],
+  "price_band": [
+    {
+      "category": "polo衫",
+      "price_band": "100-119",
+      "sku_count": 2,
+      "total_sales": 1073,
+      "mean_sales": 536.5
+    },
+    {
+      "category": "polo衫",
+      "price_band": "120-139",
+      "sku_count": 1,
+      "total_sales": 246,
+      "mean_sales": 246.0
+    },
+    {
+      "category": "polo衫",
+      "price_band": "20-39",
+      "sku_count": 12,
+      "total_sales": 56685,
+      "mean_sales": 4723.75
+    },
+    {
+      "category": "polo衫",
+      "price_band": "40-59",
+      "sku_count": 11,
+      "total_sales": 30341,
+      "mean_sales": 2758.2727272727275
+    },
+    {
+      "category": "polo衫",
+      "price_band": "60-79",
+      "sku_count": 12,
+      "total_sales": 16659,
+      "mean_sales": 1388.25
+    },
+    {
+      "category": "polo衫",
+      "price_band": "80-99",
+      "sku_count": 6,
+      "total_sales": 4474,
+      "mean_sales": 745.6666666666666
+    },
+    {
+      "category": "牛仔裤",
+      "price_band": "100-119",
+      "sku_count": 12,
+      "total_sales": 10241,
+      "mean_sales": 853.4166666666666
+    },
+    {
+      "category": "牛仔裤",
+      "price_band": "120-139",
+      "sku_count": 2,
+      "total_sales": 493,
+      "mean_sales": 246.5
+    },
+    {
+      "category": "牛仔裤",
+      "price_band": "140-159",
+      "sku_count": 2,
+      "total_sales": 500,
+      "mean_sales": 250.0
+    },
+    {
+      "category": "牛仔裤",
+      "price_band": "160-179",
+      "sku_count": 2,
+      "total_sales": 880,
+      "mean_sales": 440.0
+    },
+    {
+      "category": "牛仔裤",
+      "price_band": "20-39",
+      "sku_count": 3,
+      "total_sales": 21387,
+      "mean_sales": 7129.0
+    },
+    {
+      "category": "牛仔裤",
+      "price_band": "40-59",
+      "sku_count": 10,
+      "total_sales": 54863,
+      "mean_sales": 5486.3
+    },
+    {
+      "category": "牛仔裤",
+      "price_band": "60-79",
+      "sku_count": 9,
+      "total_sales": 23788,
+      "mean_sales": 2643.1111111111113
+    },
+    {
+      "category": "牛仔裤",
+      "price_band": "80-99",
+      "sku_count": 4,
+      "total_sales": 12987,
+      "mean_sales": 3246.75
+    }
+  ],
+  "correlation": {
+    "polo衫": {
+      "pearson": -0.689,
+      "spearman": -0.708,
+      "n": 44
+    },
+    "牛仔裤": {
+      "pearson": -0.782,
+      "spearman": -0.805,
+      "n": 44
+    }
+  },
+  "core_price_band": {
+    "polo衫": {
+      "core_band": "20-39",
+      "core_band_sales_share": 51.8,
+      "core_band_mean_sales": 4724.0,
+      "core_band_sku_count": 12,
+      "band_detail": [
+        {
+          "price_band": "20-39",
+          "sku_count": 12,
+          "total_sales": 56685,
+          "mean_sales": 4723.75,
+          "sales_share": 51.8
+        },
+        {
+          "price_band": "40-59",
+          "sku_count": 11,
+          "total_sales": 30341,
+          "mean_sales": 2758.2727272727275,
+          "sales_share": 27.7
+        },
+        {
+          "price_band": "60-79",
+          "sku_count": 12,
+          "total_sales": 16659,
+          "mean_sales": 1388.25,
+          "sales_share": 15.2
+        },
+        {
+          "price_band": "80-99",
+          "sku_count": 6,
+          "total_sales": 4474,
+          "mean_sales": 745.6666666666666,
+          "sales_share": 4.1
+        },
+        {
+          "price_band": "100-119",
+          "sku_count": 2,
+          "total_sales": 1073,
+          "mean_sales": 536.5,
+          "sales_share": 1.0
+        },
+        {
+          "price_band": "120-139",
+          "sku_count": 1,
+          "total_sales": 246,
+          "mean_sales": 246.0,
+          "sales_share": 0.2
+        }
+      ]
+    },
+    "牛仔裤": {
+      "core_band": "40-59",
+      "core_band_sales_share": 43.8,
+      "core_band_mean_sales": 5486.0,
+      "core_band_sku_count": 10,
+      "band_detail": [
+        {
+          "price_band": "40-59",
+          "sku_count": 10,
+          "total_sales": 54863,
+          "mean_sales": 5486.3,
+          "sales_share": 43.8
+        },
+        {
+          "price_band": "60-79",
+          "sku_count": 9,
+          "total_sales": 23788,
+          "mean_sales": 2643.1111111111113,
+          "sales_share": 19.0
+        },
+        {
+          "price_band": "20-39",
+          "sku_count": 3,
+          "total_sales": 21387,
+          "mean_sales": 7129.0,
+          "sales_share": 17.1
+        },
+        {
+          "price_band": "80-99",
+          "sku_count": 4,
+          "total_sales": 12987,
+          "mean_sales": 3246.75,
+          "sales_share": 10.4
+        },
+        {
+          "price_band": "100-119",
+          "sku_count": 12,
+          "total_sales": 10241,
+          "mean_sales": 853.4166666666666,
+          "sales_share": 8.2
+        },
+        {
+          "price_band": "160-179",
+          "sku_count": 2,
+          "total_sales": 880,
+          "mean_sales": 440.0,
+          "sales_share": 0.7
+        },
+        {
+          "price_band": "140-159",
+          "sku_count": 2,
+          "total_sales": 500,
+          "mean_sales": 250.0,
+          "sales_share": 0.4
+        },
+        {
+          "price_band": "120-139",
+          "sku_count": 2,
+          "total_sales": 493,
+          "mean_sales": 246.5,
+          "sales_share": 0.4
+        }
+      ]
+    }
+  },
+  "recommendations": {
+    "polo衫": {
+      "引流款建议价": 39,
+      "主推款建议价": 58,
+      "利润款建议价": 76,
+      "参考区间": "39–76 元"
+    },
+    "牛仔裤": {
+      "引流款建议价": 58,
+      "主推款建议价": 79,
+      "利润款建议价": 112,
+      "参考区间": "58–112 元"
+    }
+  }
+}

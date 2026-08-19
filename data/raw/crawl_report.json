@@ -1,0 +1,53 @@
+{
+  "crawl_time": "2026-08-19T22:16:38",
+  "summary": [
+    {
+      "platform": "taobao",
+      "category": "polo衫",
+      "status": "empty",
+      "message": "页面可访问但未解析到商品（可能为动态渲染/风控验证页）",
+      "items": 0,
+      "file": "taobao_polo衫.json"
+    },
+    {
+      "platform": "pinduoduo",
+      "category": "polo衫",
+      "status": "empty",
+      "message": "页面可访问但未解析到商品（可能为验证码页）",
+      "items": 0,
+      "file": "pinduoduo_polo衫.json"
+    },
+    {
+      "platform": "douyin",
+      "category": "polo衫",
+      "status": "empty",
+      "message": "页面为 JS 渲染空壳，未取到商品（需签名）",
+      "items": 0,
+      "file": "douyin_polo衫.json"
+    },
+    {
+      "platform": "taobao",
+      "category": "牛仔裤",
+      "status": "empty",
+      "message": "页面可访问但未解析到商品（可能为动态渲染/风控验证页）",
+      "items": 0,
+      "file": "taobao_牛仔裤.json"
+    },
+    {
+      "platform": "pinduoduo",
+      "category": "牛仔裤",
+      "status": "empty",
+      "message": "页面可访问但未解析到商品（可能为验证码页）",
+      "items": 0,
+      "file": "pinduoduo_牛仔裤.json"
+    },
+    {
+      "platform": "douyin",
+      "category": "牛仔裤",
+      "status": "empty",
+      "message": "页面为 JS 渲染空壳，未取到商品（需签名）",
+      "items": 0,
+      "file": "douyin_牛仔裤.json"
+    }
+  ]
+}
