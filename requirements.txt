@@ -5,3 +5,7 @@ requests>=2.31
 beautifulsoup4>=4.12
 lxml>=5.0
 openpyxl>=3.1
+scipy>=1.11
+sqlalchemy>=2.0
+pymysql>=1.1
+tableauhyperapi>=0.0.20000

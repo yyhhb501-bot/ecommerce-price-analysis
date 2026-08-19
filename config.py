@@ -24,3 +24,13 @@ MIN_SKUS_PER_GROUP = 15      # 每个「平台 × 品类」目标 SKU 数
 
 # 备用数据（真实抓取被拦截时的兜底，标记为 reference）
 FALLBACK_SEED = 42
+
+# MySQL 连接（专用分析账号，只授权本项目库；建库请用 sql/01_create_schema.sql + root）
+MYSQL = {
+    "host": "localhost",
+    "port": 3306,
+    "user": "ecom_user",
+    "password": "ecom_pass_2026",
+    "database": "ecommerce_prices",
+    "charset": "utf8mb4",
+}

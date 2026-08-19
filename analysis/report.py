@@ -13,7 +13,7 @@ def _fmt_band(band):
     return f"{int(a)}–{int(b)} 元"
 
 
-def build_report(result):
+def build_report(result, ab_result=None):
     corr = result["correlation"]
     core = result["core_price_band"]
     recs = result["recommendations"]
@@ -63,13 +63,33 @@ def build_report(result):
         lines.append(f"- **利润款**：定价 **{v['利润款建议价']} 元**（核心带上沿，毛利空间更大）。")
         lines.append(f"- 整体参考区间：**{v['参考区间']}**。\n")
 
-    lines.append("## 五、图表\n")
+    lines.append("## 五、A/B 测试验证（业务落地）\n")
+    if ab_result:
+        d = ab_result["design"]
+        actual = d["daily_traffic_per_group"] * d["duration_days"]
+        lines.append(
+            f"> 场景：{ab_result['scenario']}，{d['duration_days']} 天，"
+            f"最小样本量 {d['sample_size_per_group']}/组（实际每组约 {actual:,} 访客），"
+            f"α={d['alpha']}，power={d['power']}。\n"
+        )
+        lines.append("| 指标 | 对照组(A) | 实验组(B) | 提升 | p 值 | 结论 |")
+        lines.append("|---|---|---|---|---|---|")
+        for r in ab_result["results"]:
+            lines.append(
+                f"| {r['metric']} | {r['control_value']} | {r['treatment_value']} | "
+                f"{r['lift_pct']:+.1f}% | {r['p_value']:.4g} | "
+                f"{'显著' if r['significant'] else '不显著'} |"
+            )
+        lines.append("")
+        lines.append(f"**结论**：{ab_result['conclusion']}\n")
+
+    lines.append("## 六、图表\n")
     for f in sorted(os.listdir(FIG_DIR)):
         if f.endswith(".png"):
             lines.append(f"![{f}](figures/{f})")
     lines.append("")
 
-    lines.append("## 六、局限与说明\n")
+    lines.append("## 七、局限与说明\n")
     lines.append(
         "- 抖音/淘宝/拼多多均有登录态与签名风控，真实抓取被拦截的部分已用参考估测数据补齐，"
         "结论为方法演示，不构成真实经营建议。\n"

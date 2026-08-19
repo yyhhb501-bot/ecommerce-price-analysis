@@ -52,10 +52,18 @@ def _style(workbook):
         ws.freeze_panes = "A2"
 
 
-def main(result):
+def main(result, ab_result=None):
     frames = _frames(result)
     names = ["品类平台统计", "价格带分布", "相关性", "核心价格带",
              "定价建议", "价格带明细", "清洗后明细"]
+
+    if ab_result:
+        frames = list(frames) + [
+            pd.DataFrame([ab_result["design"]]),
+            pd.DataFrame(ab_result["results"]),
+            pd.DataFrame(ab_result["group_totals"]),
+        ]
+        names = names + ["AB实验设计", "AB测试结果", "AB分组汇总"]
 
     with pd.ExcelWriter(OUT_XLSX, engine="openpyxl") as writer:
         for name, df in zip(names, frames):
