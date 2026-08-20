@@ -8,6 +8,9 @@ venv/
 # SQLite 二进制产物（可由 clean.py 从 CSV 重建）
 data/processed/*.db
 
+# Office/WPS 临时锁文件
+~$*
+
 # IDE / OS
 .idea/
 .vscode/

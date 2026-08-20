@@ -3,7 +3,7 @@ import json
 import os
 from datetime import datetime
 
-from config import PROCESSED_DIR, REPORT_PATH, FIG_DIR
+from config import PROCESSED_DIR, REPORT_PATH, FIG_DIR, PLATFORMS
 
 CATEGORY_NAME = {"polo衫": "Polo 衫", "牛仔裤": "牛仔裤"}
 
@@ -22,13 +22,12 @@ def build_report(result, ab_result=None):
     lines = []
     lines.append("# 电商竞品价格与销量分析报告\n")
     lines.append(f"> 生成时间：{datetime.now().isoformat(timespec='seconds')}\n")
-    lines.append("> 品类：Polo 衫、牛仔裤　|　平台：淘宝 / 拼多多 / 抖音\n")
+    lines.append(f"> 品类：Polo 衫、牛仔裤　|　平台：{' / '.join(PLATFORMS)}\n")
 
     lines.append("## 一、数据说明\n")
     lines.append(
-        "- 采集范围：2 个品类 × 3 个平台，共 **%d** 个 SKU。\n" % sum(
-            r["sku_count"] for r in summary
-        )
+        f"- 采集范围：{len(CATEGORY_NAME)} 个品类 × {len(PLATFORMS)} 个平台，共 "
+        f"**{sum(r['sku_count'] for r in summary)}** 个 SKU。\n"
     )
     lines.append(
         "- 数据来源：`crawled`（真实抓取）与 `reference`（参考估测，用于被风控拦截时的兜底），"

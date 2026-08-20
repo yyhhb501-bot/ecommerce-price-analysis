@@ -1,5 +1,5 @@
 {
-  "crawl_time": "2026-08-19T22:51:32",
+  "crawl_time": "2026-08-19T23:14:43",
   "summary": [
     {
       "platform": "taobao",
@@ -26,6 +26,14 @@
       "file": "douyin_polo衫.json"
     },
     {
+      "platform": "wechat_channels",
+      "category": "polo衫",
+      "status": "empty",
+      "message": "页面为 JS 渲染空壳，未取到商品（需登录态）",
+      "items": 0,
+      "file": "wechat_channels_polo衫.json"
+    },
+    {
       "platform": "taobao",
       "category": "牛仔裤",
       "status": "empty",
@@ -48,6 +56,14 @@
       "message": "页面为 JS 渲染空壳，未取到商品（需签名）",
       "items": 0,
       "file": "douyin_牛仔裤.json"
+    },
+    {
+      "platform": "wechat_channels",
+      "category": "牛仔裤",
+      "status": "empty",
+      "message": "页面为 JS 渲染空壳，未取到商品（需登录态）",
+      "items": 0,
+      "file": "wechat_channels_牛仔裤.json"
     }
   ]
 }

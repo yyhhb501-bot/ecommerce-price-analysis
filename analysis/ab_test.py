@@ -1,6 +1,6 @@
 """A/B 测试：引流款定价实验的业务落地框架。
 
-场景：分析建议 Polo 衫引流款由 58 元下调到 39 元。用 A/B 测试验证降价能否
+场景：分析建议 Polo 衫引流款由 74 元下调到 49 元。用 A/B 测试验证降价能否
 显著提升转化率与 GMV/毛利，从而支持「全量上线」的决策。
 
 说明：本模块提供完整的实验设计（样本量/显著性检验/结论）框架，并用可复现的
@@ -19,8 +19,8 @@ from config import MYSQL, PROCESSED_DIR
 OUT_JSON = os.path.join(PROCESSED_DIR, "ab_test_result.json")
 
 # 业务参数
-CONTROL_PRICE = 58        # A 组（对照组）价格
-TREATMENT_PRICE = 39      # B 组（实验组）价格
+CONTROL_PRICE = 74        # A 组（对照组）价格：主推款
+TREATMENT_PRICE = 49      # B 组（实验组）价格：引流款
 UNIT_COST = 22            # 单品成本（估算）
 P0 = 0.08                 # A 组预期转化率
 P1 = 0.11                 # B 组预期转化率（降价后提升）
@@ -115,12 +115,12 @@ def run():
         f"累计 GMV 变化 {gmv_lift:+.1f}%、毛利变化 {profit_lift:+.1f}%。"
     )
     if p_conv < ALPHA and profit_lift > 0:
-        conclusion += " 建议：全量上线 39 元引流款，并持续观察毛利红线。"
+        conclusion += f" 建议：全量上线 {TREATMENT_PRICE} 元引流款，并持续观察毛利红线。"
     else:
         conclusion += " 建议：暂不扩量，缩小毛利损失后复测。"
 
     result = {
-        "scenario": "Polo 衫引流款定价 A/B 测试（58 元 vs 39 元）",
+        "scenario": f"Polo 衫引流款定价 A/B 测试（{CONTROL_PRICE} 元 vs {TREATMENT_PRICE} 元）",
         "design": {
             "metric": "转化率",
             "control_price": CONTROL_PRICE,
@@ -149,7 +149,7 @@ def _save_to_mysql(result):
     url = (f"mysql+pymysql://{MYSQL['user']}:{MYSQL['password']}@"
            f"{MYSQL['host']}:{MYSQL['port']}/{MYSQL['database']}?charset={MYSQL['charset']}")
     engine = create_engine(url)
-    exp_id = "AB_POLO_58_vs_39"
+    exp_id = "AB_POLO_74_vs_49"
     rows = []
     for r in result["results"]:
         rows.append({

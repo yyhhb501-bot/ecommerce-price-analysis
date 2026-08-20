@@ -1,9 +1,9 @@
 {
-  "scenario": "Polo 衫引流款定价 A/B 测试（58 元 vs 39 元）",
+  "scenario": "Polo 衫引流款定价 A/B 测试（74 元 vs 49 元）",
   "design": {
     "metric": "转化率",
-    "control_price": 58,
-    "treatment_price": 39,
+    "control_price": 74,
+    "treatment_price": 49,
     "unit_cost": 22,
     "alpha": 0.05,
     "power": 0.8,
@@ -16,15 +16,15 @@
       "group": "A",
       "visits": 140829,
       "orders": 11314,
-      "gmv": 656212,
-      "profit": 407304
+      "gmv": 837236,
+      "profit": 588328
     },
     {
       "group": "B",
       "visits": 139469,
       "orders": 15254,
-      "gmv": 594906,
-      "profit": 259318
+      "gmv": 747446,
+      "profit": 411858
     }
   ],
   "results": [
@@ -49,21 +49,21 @@
     {
       "metric": "日GMV",
       "test": "Welch t 检验",
-      "control_value": 46872.29,
-      "treatment_value": 42493.29,
-      "lift_pct": -9.34,
-      "p_value": 1.8e-05,
+      "control_value": 59802.57,
+      "treatment_value": 53389.0,
+      "lift_pct": -10.72,
+      "p_value": 2e-06,
       "significant": 1
     },
     {
       "metric": "日毛利",
       "test": "Welch t 检验",
-      "control_value": 29093.14,
-      "treatment_value": 18522.71,
-      "lift_pct": -36.33,
+      "control_value": 42023.43,
+      "treatment_value": 29418.43,
+      "lift_pct": -30.0,
       "p_value": 0.0,
       "significant": 1
     }
   ],
-  "conclusion": "降价(58->39元)后转化率 显著提升，累计 GMV 变化 -9.3%、毛利变化 -36.3%。 建议：暂不扩量，缩小毛利损失后复测。"
+  "conclusion": "降价(74->49元)后转化率 显著提升，累计 GMV 变化 -10.7%、毛利变化 -30.0%。 建议：暂不扩量，缩小毛利损失后复测。"
 }

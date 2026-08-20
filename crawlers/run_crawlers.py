@@ -6,12 +6,14 @@ from datetime import datetime
 from crawlers.douyin import DouyinCrawler
 from crawlers.pinduoduo import PinduoduoCrawler
 from crawlers.taobao import TaobaoCrawler
+from crawlers.wechat_channels import WechatChannelsCrawler
 from config import CATEGORIES, RAW_DIR
 
 CRAWLERS = {
     "taobao": TaobaoCrawler,
     "pinduoduo": PinduoduoCrawler,
     "douyin": DouyinCrawler,
+    "wechat_channels": WechatChannelsCrawler,
 }
 
 

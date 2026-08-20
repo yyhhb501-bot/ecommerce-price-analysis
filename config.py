@@ -5,7 +5,7 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 # 目标品类与平台
 CATEGORIES = ["polo衫", "牛仔裤"]
-PLATFORMS = ["淘宝", "拼多多", "抖音"]
+PLATFORMS = ["淘宝", "拼多多", "抖音", "微信视频号"]
 
 # 目录
 RAW_DIR = os.path.join(BASE_DIR, "data", "raw")
